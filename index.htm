@@ -1,0 +1,76 @@
+<html lang="zh-CN" class="translated-ltr"><head>
+<title>hCAPTCHA 演示</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<script src="https://js.hcaptcha.com/1/api.js?reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;custom=False" type="text/javascript" async="" defer=""></script>
+<script src="/static/js/b.js" type="text/javascript" async="" defer=""></script>
+<style type="text/css">
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-family:-apple-system,helvetica,arial,sans-serif;font-size:14px;vertical-align:baseline}fieldset{border:1px solid #ebebeb;padding:16px}form label{display:block;line-height:29px}form ul li{margin-bottom:10px}input{font-family:-apple-system,helvetica,arial,sans-serif;font-size:14px}ul{list-style:none}.sample-form{width:335px;padding:16px}.hcaptcha-error{border:1px solid #dd4b39;padding:5px}.hcaptcha-error-message{color:#dd4b39;font-size:24px;padding:10px 0}.hcaptcha-success{margin:20px; font-size: 24px;}.smsg{color:green;}.wrap{overflow-wrap: anywhere;}.warning{padding: 10px 10px 0px 10px;}
+      code { font-family: 'Courier New', Courier, monospace; background-color: lightgrey;}
+    }
+    }
+    </style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+<body>
+
+
+
+<div aria-hidden="true" class="warning"><font style="vertical-align: inherit;"></font></div>
+<br><br>
+<div class="sample-form">
+<form id="hcaptcha-demo-form" method="POST">
+<fieldset>
+<legend><font style="vertical-align: inherit;"></font></legend>
+<ul>
+
+<li role="presentation">
+<div class="">
+
+<div id="hcaptcha-demo" class="h-captcha" data-sitekey="33ec679b-73c8-4ed8-9119-0a3d231b64a6" data-callback="onSuccess" data-expired-callback="onExpire"><iframe src="https://newassets.hcaptcha.com/captcha/v1/f6912ef/static/hcaptcha-checkbox.html#id=0lyfy4y9kyt&amp;host=accounts.hcaptcha.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=False&amp;hl=zh&amp;tplinks=on&amp;sitekey=33ec679b-73c8-4ed8-9119-0a3d231b64a6&amp;theme=light" title="包含 hCaptcha 安全挑战复选框的小部件" tabindex="0" frameborder="0" scrolling="no" data-hcaptcha-widget-id="0lyfy4y9kyt" data-hcaptcha-response="" style="width: 303px; height: 78px; overflow: hidden;"></iframe><textarea id="g-recaptcha-response-0lyfy4y9kyt" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-0lyfy4y9kyt" name="h-captcha-response" style="display: none;"></textarea></div>
+<script>
+                      // success callback
+                      var onSuccess = function(response) {
+                        var errorDivs = document.getElementsByClassName("hcaptcha-error");
+                        if (errorDivs.length) {
+                          errorDivs[0].className = "";
+                        }
+                        var errorMsgs = document.getElementsByClassName("hcaptcha-error-message");
+                        if (errorMsgs.length) {
+                          errorMsgs[0].parentNode.removeChild(errorMsgs[0]);
+                        }
+
+                        var logEl = document.querySelector(".hcaptcha-success");
+                        logEl.innerHTML = "Challenge Success!"
+                      };
+
+                      var onExpire = function(response) {
+                        var logEl = document.querySelector(".hcaptcha-success");
+                        logEl.innerHTML = "Token expired."
+                      };
+                </script>
+
+</div>
+</li>
+
+</ul>
+</fieldset>
+</form>
+<div class="hcaptcha-success smsg" aria-live="polite"></div>
+</div>
+
+<script type="text/javascript">
+    // beacon example
+    function addEventHandler(object,szEvent,cbCallback){
+        if(!!object.addEventListener){ // for modern browsers or IE9+
+            return object.addEventListener(szEvent,cbCallback);
+        }
+        if(!!object.attachEvent){ // for IE <=8
+            return object.attachEvent(szEvent,cbCallback);
+        }
+    };
+    // Ex: triggers pageview beacon
+    addEventHandler(window,'load',function(){b();});
+    // Ex: triggers event beacon without pageview
+    addEventHandler(window,'load',function(){b({"vt": "e", "ec": "test_cat", "ea": "test_action"});});
+  </script>
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google 翻译"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div aria-hidden="true" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(215, 215, 215); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px; border-radius: 4px; left: -10000px; top: -10000px; z-index: -2147483648; position: absolute; transition: opacity 0.15s ease-out 0s; opacity: 0; visibility: hidden; display: block;"><div style="position: relative; z-index: 1; width: 400px; height: 600px;"><iframe src="https://newassets.hcaptcha.com/captcha/v1/f6912ef/static/hcaptcha-challenge.html#id=0lyfy4y9kyt&amp;host=accounts.hcaptcha.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=False&amp;hl=zh&amp;tplinks=on&amp;sitekey=33ec679b-73c8-4ed8-9119-0a3d231b64a6&amp;theme=light" title="hCaptcha挑战的主要内容" frameborder="0" scrolling="no" style="border: 0px; z-index: 2000000000; position: relative; width: 400px; height: 600px;"></iframe></div><div style="width: 100%; height: 100%; position: fixed; pointer-events: none; top: 0px; left: 0px; z-index: 0; background-color: rgb(255, 255, 255); opacity: 0.05; cursor: default;"></div><div style="border-width: 11px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 1; right: 100%; top: 278px;"><div style="border-width: 10px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; position: relative; top: 10px; z-index: 1; display: block;"></div><div style="border-width: 11px; border-style: solid; border-color: transparent rgb(215, 215, 215) transparent transparent; position: relative; top: -11px; z-index: 0; display: block;"></div></div></div><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
